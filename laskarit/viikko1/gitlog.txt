@@ -1,0 +1,115 @@
+ot_viikko1/tiedostoja$ git log --stat | cat
+commit 5344ba390a6c126e084c00c9ba2b7763305f76d4
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 16:22:25 2021 +0200
+
+    uudelleen nimeäminen sekä tiedoston poisto
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit cdd3cc932644c303c8ff1dad62f1d552a9485493
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 16:13:37 2021 +0200
+
+    kansio tiedostoja lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ca7f8741542aaf7ba33afb777e42392118fbba15
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:57:45 2021 +0200
+
+    muutokset -p optiolla
+
+ eka.txt      | 25 +------------------------
+ kolmas.txt   |  6 ++++++
+ tiedosto.txt | 27 ---------------------------
+ 3 files changed, 7 insertions(+), 51 deletions(-)
+
+commit 9d469d02e6e6298e7bc02177c6f02b3dd21a1902
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:52:41 2021 +0200
+
+    nimen muutos tiedosto.txt > eka.txt
+
+ eka.txt | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit 52b26ffe1b2551eff8c5b1b5c227de3a98e94f7a
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:49:47 2021 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit e952b0d601b3be38fe3fa0123bdf5b6f7dfb6218
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:45:09 2021 +0200
+
+    lisää tekstiä lisätty tiedosto.txt
+
+ tiedosto.txt | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit 26c2c3e046b3fcd2d3f7869599a403c5281cd5ea
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:43:32 2021 +0200
+
+    tekstiä lisätty tiedosto.txt
+
+ tiedosto.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit ca3d06bfd69cf73de0b23038bf92f39db60a471e
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:12:58 2021 +0200
+
+    kansio lisätty (stuff)
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c45862b6cf56be3fae54c7a9a6b68612d5197513
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:11:31 2021 +0200
+
+    muutoksia toiseen ja kolmanteen txt tiedostoon
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit f39f9f2f7e72cfbacc2395387bfbfe792115a920
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:10:14 2021 +0200
+
+    kolmas tiedosto lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9df9f6d98f9aca9042dc9547985397577b85ab92
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 15:02:00 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 66e82eef43728b54b6082528ba7859798e074442
+Author: Jukka <jukka.mustonen@helsinki.fi>
+Date:   Fri Nov 5 14:58:16 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
