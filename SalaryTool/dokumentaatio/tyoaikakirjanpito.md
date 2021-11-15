@@ -1,1 +1,3 @@
-| Päivä | Käytetty aika | Tehty työ           |
+| Päivä | Käytetty aika | Tehty työ             |
+|-------|---------------|-----------------------|
+|	|		|			|	
