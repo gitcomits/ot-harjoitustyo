@@ -17,3 +17,10 @@ Sekä lopullinen *ohjelmistototeutus*
 ###  Viikko 2
 
 [vaatimusmaarittely.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/vaatimusmaarittely.md)
+
+[tyoaikakirjanpito.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/tyoaikakirjanpito.md)
+
+
+### Viikko 3
+
+[kaaviot](https://github.com/gitcomits/ot-harjoitustyo/tree/master/laskarit/viikko3)
