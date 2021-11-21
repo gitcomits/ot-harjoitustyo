@@ -4,6 +4,7 @@ Repoon on tarkoitus palauttaa **viikkotehtävät**
 
 Sekä lopullinen *ohjelmistototeutus* 
 
+Viikko 2 osiota päivitetty määräajan jälkeen lisäämällä linkki työaikakirjanpitoon 
 
 ## Viikkotehtävät
 
