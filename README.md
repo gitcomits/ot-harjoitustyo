@@ -13,6 +13,8 @@ missä huomioidaan osa-aikaisuus ja tämän vaikutus myös lomarahoihin.
 
 [tyoaikakirjanpito.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/tyoaikakirjanpito.md)
 
+[käyttöohje.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/kayttoohje.md)
+
 
 ### Asennus
 
