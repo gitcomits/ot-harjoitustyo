@@ -33,6 +33,6 @@ Riippuvuuksien asennus
 
 ### Testiraportti
 
-'poetry run invoke coverage-report'
+`poetry run invoke coverage-report`
 
 
