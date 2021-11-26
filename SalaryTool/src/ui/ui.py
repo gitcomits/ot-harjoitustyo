@@ -9,12 +9,21 @@ class UI:
 #       self.full_or_part = 0
 #       self.holidays = 0 
 
-    print("To exit just type Exit")
+    
+    def info_box(message:str):
 
+        print()
+        print("*" * 20)
+        print("*", message, " " * 3, "*")
+        print("*" * 20) 
+
+
+
+   
     def is_positive(digit):
 
         if(int(digit) < 0):
-            print("Input should be a postive number")
+            UI.info_box("Input should be a postive number")
             return False
         return True
 
@@ -74,16 +83,20 @@ class UI:
             print("Input type should be alphabetical")
             return False    
 
+    
+
 
 ###############################################################################
 #                             Input starts here                               #
 ###############################################################################
-
+    print('\n' * 99)                                            # Clean slate start
+    print("To exit just type Exit")
+    print()
+      
     while(True):                                                    # All required input
-
         while(True):                                                # Salary
             
-            monthly_salary = input("Monthly salary: ")              # Monthly salary, should be as stated in the contract
+            monthly_salary = input("\t\tMonthly salary: ")              # Monthly salary, should be as stated in the contract
 
             if(is_numeric(monthly_salary) == False):
                 exit_called(monthly_salary)
@@ -99,7 +112,7 @@ class UI:
             
         while(True):                                                # Tax percentage
             
-            tax_percentage = input("Tax percentage (0 for net calculation): ")    
+            tax_percentage = input("\t\tTax percentage (0 for net calculation): ")    
             
             if(is_numeric(tax_percentage) == False):                # Acquired from www.vero.fi/laskurit
                 exit_called(tax_percentage)
@@ -115,7 +128,7 @@ class UI:
         while(True):                                                # Full or parttime, fulltime 100% salary, part-time
             
             control = ["f","p"]
-            full_or_part = input("Full- or part-time (F/P): ")    
+            full_or_part = input("\t\tFull- or part-time (F/P): ")    
             
             if(is_text(full_or_part, control) == False):                 
                 exit_called(full_or_part)
@@ -127,7 +140,7 @@ class UI:
 
         while(True):                                                # holidays    
 
-            holidays = input("Paid vacation days: ")                  # Used to calulate holiday payment 
+            holidays = input("\t\tPaid vacation days: ")                  # Used to calulate holiday payment 
 
             if(is_integer(holidays)):
                 if(is_positive(holidays) != True):
@@ -141,5 +154,4 @@ class UI:
 
         break        
 
- 
  
