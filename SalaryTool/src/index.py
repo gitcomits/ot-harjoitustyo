@@ -12,7 +12,7 @@ def main():
     tax = TaxCalculator(ux)
 
 
-#    tax.printMe()
+    tax.print_me()
 
     print(tax.calculate_income_after_tax())
 
