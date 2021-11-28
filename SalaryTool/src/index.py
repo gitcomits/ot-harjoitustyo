@@ -4,12 +4,12 @@ from ui.ui import UI
 
 def main():
 
-    ux = UI()
+    u_x = UI()
 
-    print(ux.tax_percentage)
+    print(u_x.tax_percentage)
 #    print(ux.monthly_salary, " monthly salary finds its way here")
 
-    tax = TaxCalculator(ux)
+    tax = TaxCalculator(u_x)
 
 
     tax.print_me()
