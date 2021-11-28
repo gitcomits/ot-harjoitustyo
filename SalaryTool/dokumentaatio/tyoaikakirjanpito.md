@@ -6,4 +6,5 @@
 |25.11.21|12:00 - 14:00  |Pylint lisäys, koodin selvennystä pylintin mukaiseksi		|2:00|
 |26.11.21|14:00 - 17:00	 |Ui:n funktiot eritelty omaan luokkaan                         |3:00|
 |27.11.21|12:00 - 18:00  |Virheiden paikallistamista, ui:n ja tarkistus logiikan viilausta |6:00|
-|        |               |Tunnit yhteensä 						|24:10|
+|28.11.21|08:00 - 14:00  |Ui sääntöjen hiomista                                         |6:00|
+|        |               |Tunnit yhteensä 						|30:10|

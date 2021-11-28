@@ -70,8 +70,7 @@ class UIDefs:
                 return True
             else:
                 return False
-        else:
-    #        print("Input type should be alphabetical")
+        else: 
             return False
 
     def one_or_many_months(self, string:str):                   # is input one month or a range of months
@@ -83,7 +82,7 @@ class UIDefs:
             return 2
         return 1
 
-    def already_exists(self, l:list, c:int):                      # individual month
+    def already_exists(self, l:list, c:int):                      # individual month has already been inserted
         
         if(l.count(c) == 0):
             l.append(c)
@@ -91,6 +90,17 @@ class UIDefs:
             print(" " * 15, ">>> Month already exists in input <<<")    
         return l     
 
+    def already_exists_in_range(self,m, r):
+        if(len(r) == 0):
+            return False
+        
+        for mm in r:
+            if m in range(mm[0],mm[1]+1):
+                print("Alert Alert overlap overlap")
+                return True
+
+        return False
+    
     def is_valid_month_number(self, n):
         if(n > 0 and n <= 12):
             return True
@@ -102,8 +112,45 @@ class UIDefs:
         return False    
 
     def is_under_limit(self,limit:int, digit:int):
-        if(limit > digit ):
+        if(limit > digit):
             return True
         return False    
 
+    def save_months_to_dictionary(self,dic,key, m, m_range):
+        t1 = []
+        t2 = []
+        if(len(m_range) > 0):
+            for mon in m_range: 
+                t2.append(list(range(mon[0],mon[1]+1)))              # range to numbers --> inside list
+                
+                for t in t2:
+                    for e in t:
+                        t1.append(e)                                      # comma separated
+                t2 = []
+
+        if(len(m) > 0):
+            for n in m:
+                t1.append(n)     
+
+        if(key in dic):                                        # key already exists
+            print("has skey :", key)
+
+        else:
+            t1.sort()
+            dic[key] = t1
+            return dic
+
+        print("this shit is about the get wired", t1)
+
+
+    def month_is_in_dictionary(self, m, dic):
+        for  di in dic.values():
+            for o in di:
+                if(o == m):
+                    print("Already inserted months:")
+                    for pair in dic.items():
+                        print(pair)
+                    return True
+
+        return False        
 
