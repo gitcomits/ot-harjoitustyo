@@ -90,7 +90,7 @@ class UIDefs:
             print(" " * 15, ">>> Month already exists in input <<<")    
         return l     
 
-    def already_exists_in_range(self,m, r):
+    def already_exists_in_range(self,m, r):                     # month already in previously given range
         if(len(r) == 0):
             return False
         
@@ -139,8 +139,6 @@ class UIDefs:
             t1.sort()
             dic[key] = t1
             return dic
-
-        print("this shit is about the get wired", t1)
 
 
     def month_is_in_dictionary(self, m, dic):

@@ -27,20 +27,8 @@ class TestHolidayPayment(unittest.TestCase):
         self.daily_salary = self.monthly_salary/22
         self.assertEqual(HolidayPayment.calculate_holiday_money(self), 500)        
 
-
-#   def calculate_holiday_money(self):
-#        self.holiday_payment_days()
-#        self.monthly_salary_to_daily()
-#        self.holiday_payment = (self.paid_holiday_days * self.daily_salary) * 0.5 
-#        print("holiday money", self.holiday_payment)
-
-
-
-
-
-
-
-
+    def test_withdrawn_days_from_payment(self):
+        self.assertEqual(HolidayPayment.withdrawn_days_from_payment(self),self.holidays//6)
 
     def test_validation(self):                    # to validate that something is working
         x = int(self.number)

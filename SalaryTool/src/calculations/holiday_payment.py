@@ -11,9 +11,11 @@ class HolidayPayment:
 
     def holiday_payment_days(self):
         self.paid_holiday_days = self.holidays - (self.holidays//6)  # saturdays withdrawn from days
-        return self.paid_holiday_days
-#        self.days_withdrawn_from_payment = self.holidays//6            # how many days were didacted
+        return self.paid_holiday_days  
 
+    def withdrawn_days_from_payment(self):
+        self.days_withdrawn_from_payment = self.holidays//6            # how many days were didacted
+        return self.days_withdrawn_from_payment
 
     def monthly_salary_to_daily(self):
         self.daily_salary = self.monthly_salary/22                   # TES dependent, needs checking
