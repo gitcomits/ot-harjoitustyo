@@ -13,6 +13,8 @@ def main():
 
 #    holiday_money.holiday_payment_days()
 
+    holiday_money.holiday_payment_days()
+    holiday_money.monthly_salary_to_daily()
     holiday_money.calculate_holiday_money()
 
 #    print("look at tat")
@@ -22,9 +24,9 @@ def main():
     tax = TaxCalculator(u_x)
 
 
-    tax.print_me()
+#    tax.print_me()
 
-    print(tax.calculate_income_after_tax())
+#    print(tax.calculate_income_after_tax())
 
 
 if __name__ == "__main__":
