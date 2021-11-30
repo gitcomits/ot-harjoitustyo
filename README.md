@@ -15,6 +15,8 @@ missä huomioidaan osa-aikaisuus ja tämän vaikutus myös lomarahoihin.
 
 [käyttöohje.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/kayttoohje.md)
 
+[arkkitehtuuri.md](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/arkkitehtuuri.md)
+
 
 ### Asennus
 
