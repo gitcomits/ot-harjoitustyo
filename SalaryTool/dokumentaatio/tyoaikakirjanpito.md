@@ -7,4 +7,5 @@
 |26.11.21|14:00 - 17:00	 |Ui:n funktiot eritelty omaan luokkaan                         |3:00|
 |27.11.21|12:00 - 18:00  |Virheiden paikallistamista, ui:n ja tarkistus logiikan viilausta |6:00|
 |28.11.21|08:00 - 14:00  |Ui sääntöjen hiomista                                         |6:00|
-|        |               |Tunnit yhteensä 						|30:10|
+|30.11.21|19:00 - 22:00  |Tax calculation class, dokumentation				|3:00
+|        |               |Tunnit yhteensä 						|33:10|
