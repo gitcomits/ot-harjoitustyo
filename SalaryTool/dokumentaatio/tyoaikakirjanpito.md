@@ -7,6 +7,9 @@
 |26.11.21|14:00 - 17:00	 |Ui:n funktiot eritelty omaan luokkaan                         |3:00|
 |27.11.21|12:00 - 18:00  |Virheiden paikallistamista, ui:n ja tarkistus logiikan viilausta |6:00|
 |28.11.21|08:00 - 14:00  |Ui sääntöjen hiomista                                         |6:00|
-|30.11.21|19:00 - 22:00  |HolidayPayment class, dokumentation				|3:00
-|30.11.21|22:00 - 23:00  |HolidayPayment testit						|1:00
-|        |               |Tunnit yhteensä 						|34:10|
+|30.11.21|19:00 - 22:00  |HolidayPayment class, dokumentation				|3:00|
+|30.11.21|22:00 - 23:00  |HolidayPayment testit						|1:00|
+|31.11.21|19:00 - 21:00  |Format class, PartTimeCalculator class                        |2:00|
+|03.12.21|17:00 - 18:00  |UI tarkasuksia, format luokka                                 |1:00|
+|04.12.21|11:00 - 13:30  |Format luokkan työstämistä                                    |2:30|
+|        |               |Tunnit yhteensä 						|39:40|

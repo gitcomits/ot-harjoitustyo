@@ -11,6 +11,7 @@ class UI:
 
     print('\n' * 99)                                            # Clean slate start
     m_div = {}                                                  # monthly division of %
+    m_prop = {}
     empty = []                                                  # always empyt
     months = []                                                 # individual months with salary
     months_r = []                                               # range of months  
@@ -34,6 +35,7 @@ class UI:
 
             defs.is_cero(monthly_salary) 
             monthly_salary = defs.float_conversion(monthly_salary)
+            print("has float?", monthly_salary)
             break
 
 
@@ -89,6 +91,9 @@ class UI:
                     defs.exit_called(m)                                     # exit called  
 
                     if(m.lower() == "c"):                                   # continue called
+                        break     #xxxx
+
+
                         if(len(months) > 0 or len(months_r) > 0):           # has anything bee ninserted
                             if(len(m_div) > 0):                             # tarkastukset
 
@@ -198,7 +203,7 @@ class UI:
 
         
     while(True):                                                # Tax percentage
-        
+        l = []
         tax_percentage = input("\t\tTax percentage (0 for net calculation): ")    
         
         if(defs.is_numeric(tax_percentage) == False):           # Acquired from www.vero.fi/laskurit
@@ -206,6 +211,7 @@ class UI:
             defs.info_box("Input type should be numeric",l)
         
         else: 
+            tax_percentage = defs.float_conversion(tax_percentage)
             if(defs.is_positive(tax_percentage) != True):
                 defs.info_box("Input should be a postive number",l)
                 continue 

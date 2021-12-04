@@ -19,15 +19,21 @@ class UIDefs:
     
     def is_positive(self,digit):
 
-        if(int(digit) < 0):
-            return False
+        if(isinstance(digit, int)): 
+            if(int(digit) < 0): 
+                return False
+        if(isinstance(digit, float)):
+            if(digit < 0): 
+                return False
         return True
 
     def is_cero(self, digit):
-        if(int(digit) == 0):
-            print("\n" * 99)
-            print("Nothing to do with 0 salary")
-            sys.exit("Program terminated due to misuse")
+        
+        if(isinstance(digit, int)):
+            if(int(digit) == 0):
+                print("\n" * 99)
+                print("Nothing to do with 0 salary")
+                sys.exit("Program terminated due to misuse")
 
     
     def is_over_hundred(self, digit):

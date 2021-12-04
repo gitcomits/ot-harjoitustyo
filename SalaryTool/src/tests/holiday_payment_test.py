@@ -1,11 +1,10 @@
 import unittest
 from calculations.holiday_payment import HolidayPayment
-
+#from ui.ui import UI
 
 class TestHolidayPayment(unittest.TestCase):
 
     def setUp(self):
-        self.number = 1                           # default validation test value
 
         self.holidays = 26                    
         self.monthly_salary = 1000
@@ -13,6 +12,15 @@ class TestHolidayPayment(unittest.TestCase):
         self.days_withdrawn_from_payment = None
         self.holiday_payment = None
         self.daily_salary = None
+        u_x = type('', (), {})()
+        u_x.holidays = self.holidays
+    #    self.u_x = UI()
+    #    self.u_x.holidays = self.holidays
+    #    self.u_x.holidays = self.holidays
+
+#    def test_init_constructor(self,u_x):
+#        self.assertEqual(HolidayPayment.__init__(self,u_x),self.holidays)
+
 
     def test_holiday_payment_days(self):
         hdp = HolidayPayment.holiday_payment_days(self)
@@ -30,7 +38,4 @@ class TestHolidayPayment(unittest.TestCase):
     def test_withdrawn_days_from_payment(self):
         self.assertEqual(HolidayPayment.withdrawn_days_from_payment(self),self.holidays//6)
 
-    def test_validation(self):                    # to validate that something is working
-        x = int(self.number)
-        self.assertEqual(int(self.number), 1 * x)
     
