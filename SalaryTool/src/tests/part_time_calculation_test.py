@@ -10,3 +10,9 @@ class TestPartTimeCalculator(unittest.TestCase):
 
     def test_calculate_part_time_salary(self):
         self.assertEqual(PartTimeCalculator.calculate_part_time_salary(self,self.key),800)
+
+
+    def test_class_init_value(self):
+        o = PartTimeCalculator(self.monthly_salary).__init__(333)
+        self.assertEqual(PartTimeCalculator(self.monthly_salary).__init__(333),o)
+        

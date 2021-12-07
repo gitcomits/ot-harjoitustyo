@@ -7,10 +7,10 @@ class TestHolidayPayment(unittest.TestCase):
 
         self.holidays = 26                    
         self.monthly_salary = 1000
-        self.paid_holiday_days = None
+        self.paid_holiday_days = 2
         self.days_withdrawn_from_payment = None
         self.holiday_payment = None
-        self.daily_salary = None
+        self.daily_salary = 200
         u_x = type('', (), {})()
         u_x.holidays = self.holidays
     #    self.u_x = UI()
@@ -33,4 +33,8 @@ class TestHolidayPayment(unittest.TestCase):
     def test_withdrawn_days_from_payment(self):
         self.assertEqual(HolidayPayment.withdrawn_days_from_payment(self),self.holidays//6)
 
+    def test_calculate_holiday_money_part_time(self):
+        self.assertEqual(HolidayPayment.calculate_holiday_money_part_time(self, 50), 100)   
     
+ 
+
