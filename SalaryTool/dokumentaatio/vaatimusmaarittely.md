@@ -18,8 +18,10 @@ Käyttöliittymissä tulee olemaan mahdollisuus syöttää seuraavat tiedot:
 	  	- [x] mahdollistaa veroprosentin syötön 
 	- [x] osa-aikaisuus vai kokoaika
 	- [x] aika mille tulot lasketaan ja millä aikaisuudella
-	- [ ] tulostus summista ja niiden jakautumisesta kk tasolla
+	- [x] tulostus summista ja niiden jakautumisesta kk tasolla
 	- [x] lomapäivien syöttö
+	- [ ] ruudulle tulostus luettavaan muotoon
+	- [ ] tallennus tiedostoon txt tai pdf	
 
 ## Ensimmäisen version toiminnallisuus 
 
