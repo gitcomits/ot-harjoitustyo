@@ -20,7 +20,7 @@ missä huomioidaan osa-aikaisuus ja tämän vaikutus myös lomarahoihin.
 
 ### Asennus
 
-Riippuvuuksien asennus
+Riippuvuuksien asennus (komento suoritetaan SalaryTool-kansiossa
 
 `poetry install`
 
