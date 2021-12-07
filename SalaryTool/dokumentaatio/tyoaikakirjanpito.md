@@ -14,4 +14,5 @@
 |04.12.21|11:00 - 13:30  |Format luokkan työstämistä                                    |2:30|
 |05.12.21|11:00 - 14:00  |Muutama uusi laskenta luokka                                  |3:00|
 |07.12.21|13:00 - 16:30  |Testejä, koodin siivousta, dokumentointia                     |3:30|
-|        |               |Tunnit yhteensä 						|46:10|
+|07.12.21|18:00 - 20:30  |Dookumentaatiota                                              |2:30|     
+|        |               |Tunnit yhteensä 						|49:40|

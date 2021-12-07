@@ -8,8 +8,6 @@ class TaxCalculator():
         self.mo_salary = user_input.monthly_salary
         self.tax = user_input.tax_percentage
 
-    def print_me(self):
-        print(self.mo_salary, "kuukausipalkka siirtynyt tax calculatoriin")
 
 # income - tax
     def calculate_income_after_tax(self):

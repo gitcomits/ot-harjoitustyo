@@ -12,8 +12,6 @@ def main():
 
     reformat.re_format()
 
-    print(u_x.tax_percentage)
-
 if __name__ == "__main__":
 
     main()
