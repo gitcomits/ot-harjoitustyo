@@ -20,7 +20,7 @@ missä huomioidaan osa-aikaisuus ja tämän vaikutus myös lomarahoihin.
 
 ### Asennus
 
-Riippuvuuksien asennus (komento suoritetaan SalaryTool-kansiossa
+Riippuvuuksien asennus (**kaikki poetry komennot tulee suorittaa SalaryTool-kansiossa**)
 
 `poetry install`
 
@@ -38,3 +38,7 @@ Riippuvuuksien asennus (komento suoritetaan SalaryTool-kansiossa
 `poetry run invoke coverage-report`
 
 
+### Source code
+
+Release Candidate
+[source code] (https://github.com/gitcomits/ot-harjoitustyo/releases)
