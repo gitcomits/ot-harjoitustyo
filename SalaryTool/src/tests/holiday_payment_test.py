@@ -1,6 +1,5 @@
 import unittest
 from calculations.holiday_payment import HolidayPayment
-#from ui.ui import UI
 
 class TestHolidayPayment(unittest.TestCase):
 
@@ -25,10 +24,6 @@ class TestHolidayPayment(unittest.TestCase):
     def test_holiday_payment_days(self):
         hdp = HolidayPayment.holiday_payment_days(self)
         self.assertEqual(hdp, self.holidays - (self.holidays//6 ))
-
-    def test_monthly_salary_to_daily(self):
-        ds = self.monthly_salary/22
-        self.assertEqual(HolidayPayment.monthly_salary_to_daily(self),ds)
 
     def test_calculate_holiday_money(self):
         self.paid_holiday_days = 22

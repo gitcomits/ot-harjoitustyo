@@ -1,3 +1,4 @@
+import calendar
 
 if(__name__ == "__main__"):                                    # suora suoritus 
     from ui_defs  import UIDefs
@@ -16,9 +17,8 @@ class UI:
     months = []                                                 # individual months with salary
     months_r = []                                               # range of months  
     l = []                                                      # for printing purposes
-    print(" " *3, "To exit just type Exit\n")
-
     
+    print(" " *3, "To exit just type Exit\n")    
                                                         # All required input
     while(True):                                                # Salary
         
@@ -35,7 +35,7 @@ class UI:
 
             defs.is_cero(monthly_salary) 
             monthly_salary = defs.float_conversion(monthly_salary)
-            print("has float?", monthly_salary)
+            #print("has float?", monthly_salary)
             break
 
 
@@ -76,8 +76,7 @@ class UI:
                     #break
                 else:
                     prop = 100                                      # full time full salary 
-    #                    break
-
+    
 
                 while(True):                        
                     l = ["C - Continue program", "Input in numbers", "January = 1, February = 2, ..., December = 12",\
@@ -91,53 +90,46 @@ class UI:
                     defs.exit_called(m)                                     # exit called  
 
                     if(m.lower() == "c"):                                   # continue called
-                        break     #xxxx
-
+    
 
                         if(len(months) > 0 or len(months_r) > 0):           # has anything bee ninserted
                             if(len(m_div) > 0):                             # tarkastukset
+                                pass
 
-                                
-                                print("hello workd")
-                            
                             m_div = defs.save_months_to_dictionary(m_div, prop, months, months_r)
                             months_r = []
                             months = []
-                            print(m_div, " syötetyt arvot prosenttejen kanssa")
-
+    
                         break
 
                     month_or_range = defs.one_or_many_months(m)       # 1 = month 2 = range 
 
-        #                    if(defs.one_or_many_months(m) == 1):              # Validation checks for one month input
                     if(month_or_range == 1):              # Validation checks for one month input    
                         if(defs.is_integer(m) and defs.is_positive(m)):
                             m = defs.integer_conversion(m)
-                            print(len(months_r), " months r range")
+                            # print(len(months_r), " months r range")
                             if(defs.is_valid_month_number(m)):
                                 
                                 if(defs.already_exists_in_range(m,months_r) == False):      # if no overlap in range
                                     if(defs.month_is_in_dictionary(m, m_div) == False):     # if month in dicitonary
                                         months = defs.already_exists(months, m)       # individual month already inserted
-                                        print(months, "yksi kuukausi syötetty")
+                                #        print(months, "yksi kuukausi syötetty")
                                     else:
                                         print(">>> overlaping months <<<")    
 
                                 else:
                                     print(">>> overlaping months <<<")
-                                    print(f"{m} already exists in {months_r}")    
-                            
+                                    print(f"Month {m} ({calendar.month_abbr[m]}) already exists in the range of months >> {months_r}")    
+                             
                             else:
                                 print(" "*15, f">>> {m} is not a valid month number <<<")
 
                         else:
-                        #    defs.info_box(">>> Input should be integer <<<", l)
                             print()
                             print(" " * 15,">>> Input should be a positive integer <<<")    
                     
-        #                    if(defs.one_or_many_months(m) == 2):
+
                     if(month_or_range == 2):                            # validation for range of months
-                        print(m, " range")                                               
                         validation = m.split(":")
                         if(defs.is_integer(validation[0]) and defs.is_positive(validation[0]) 
                         and defs.is_integer(validation[1]) and defs.is_positive(validation[1])):
@@ -170,30 +162,22 @@ class UI:
                                     n1 += 1        
                                 
                                 if(check):
-
-                                #    print(validation, " what we gots")
                                     months_r.append(validation)
-                                    print(months)
+
                                 else:
+
                                     print(">>> input already in range <<<")
 
 
 
                             else:
-                                print(" " * 15,"<<< inserted range not valid >>>")
-                        #    if(defs.is_valid_month_number(m)):
-                            
-                            print(months_r)
-                            print(validation)
-                            print(months)
-
+                                print(" " * 15,"<<< inserted range not valid >>>") 
+    
                         else:
                             print()
                             print(" " * 15,">>> Input should be a valid range of months <<<")    
-                #    defs.month_validation(m)
-
+    
                 l = [] 
-            #    break 
             
             
             elif(defs.is_text(full_or_part, control) == False):                 
@@ -204,7 +188,7 @@ class UI:
         
     while(True):                                                # Tax percentage
         l = []
-        tax_percentage = input("\t\tTax percentage (0 for net calculation): ")    
+        tax_percentage = input("\t\tTax percentage: ")    
         
         if(defs.is_numeric(tax_percentage) == False):           # Acquired from www.vero.fi/laskurit
             defs.exit_called(tax_percentage)

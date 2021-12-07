@@ -7,7 +7,6 @@ class TaxCalculator():
 
         self.mo_salary = user_input.monthly_salary
         self.tax = user_input.tax_percentage
-        
 
     def print_me(self):
         print(self.mo_salary, "kuukausipalkka siirtynyt tax calculatoriin")
@@ -18,3 +17,10 @@ class TaxCalculator():
             return self.mo_salary
 #            sum = self.mo_salary * ((100 - self.tax)/100)
         return self.mo_salary * ((100 - self.tax)/100)
+
+
+    def calculate_holiday_money_after_tax(self, holiday_money):
+        if self.tax == 0:
+            return holiday_money
+#            sum = self.mo_salary * ((100 - self.tax)/100)
+        return holiday_money * ((100 - self.tax)/100)

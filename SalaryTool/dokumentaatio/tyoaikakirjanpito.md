@@ -12,4 +12,6 @@
 |31.11.21|19:00 - 21:00  |Format class, PartTimeCalculator class                        |2:00|
 |03.12.21|17:00 - 18:00  |UI tarkasuksia, format luokka                                 |1:00|
 |04.12.21|11:00 - 13:30  |Format luokkan työstämistä                                    |2:30|
-|        |               |Tunnit yhteensä 						|39:40|
+|05.12.21|11:00 - 14:00  |Muutama uusi laskenta luokka                                  |3:00|
+|07.12.21|13:00 - 16:30  |Testejä, koodin siivousta, dokumentointia                     |3:30|
+|        |               |Tunnit yhteensä 						|46:10|
