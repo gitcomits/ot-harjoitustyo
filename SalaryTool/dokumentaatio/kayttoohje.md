@@ -11,20 +11,61 @@
 
 # Ohjelman käynnistys
 
-'poetry run invoke start`
+`poetry run invoke start`
 
+
+## Taustaa
+
+Ohjelman idea syntyi omista tarpeista. Opiskelun aloittaessani muutin työsuhteeni 
+osa-aikaiseksi tietyiltä kuukausilta. Teen siis lyhennettyä työpäivää osan vuodesta ja osan
+vuodesta kokonaista työpäivää. Vuositulojen ja lähinnä tulevien lomarahojen hahmottelu ei ollutkaan 
+aivan yhtä suoraselkoista kuin aikasemmin. 
+
+Ohjelman avulla pystyy helposti laskemaan vuoden, tai lyhyemmän ajan, brutto ja netto  ansiot lomarahoineen.
+
+## Yleiset ohjeet
+
+Osa-aikaisuudella tarkoitetaan tässä yhteydessä prosentuaalista osaa kokopäiväisestä työajasta.
+Esimerkiksi 80% osa-aikaisuus tarkoittaa työajan pituuden olevan 80% kokopäiväisestä työajasta,
+näin ollen ohjelma laskee 80% kuukausipalkasta niille kuukausille joille osa-aikaisuus on merkitty.
+
+Lomarahojen laskutapa vaihtelee työehtosopimuksista riippuen, mutta tällä hetkellä ohjelma laskee 
+lomarahat päiväpalkka / 2. Laskutapa on käytössä Tietotekniikan- sekä Finanssialan TES:ssä.   
+
+Lomarahat maksetaan oikeasti vasta seuraavana vuonna niiden ansaitsemisen jälkeen. 
+Ohjelma kuitenkin laskee annetuille lomapäiville lomarahan. 
+Jos muutosta työajassa viime vuoteen verrattuna ei ole ollut toteutuu laskelma oikein,
+muuten on hyvä ottaa huomioon että lomarahojen summa on tulevana vuotena maksussa.    
+
+Päiväpalkkaa lasettaessa, jota käytetään lomarahojen laskemiseen, käytetään jakajana 22:ta. 
+Tämäkin luku vaihtelee TES:stä riippuen.  
 
 ## Käyttö
 
-Ohjelman käynnistyksen jälkeen tulee käyttäjän syöttää ohjelman haluamat tiedot
+Ohjelman käynnistyksen jälkeen pääsee käyttäjä poistumaan siitä missä tahansa vaiheessa kirjoittamalla 
+ruudulle `exit`
 
-Ohjelman syöttö logiikka pitäisi olla aukoton, väärää tietoa ei tulisi pystyä syöttämään.
+1 Ohjelma pyytää syöttämään kuukausipalkan `Monthly salary:` johon annetaan palkka jolla laskelma halutaan tehdä.
+2 Ohjelma kysyy onko kyseessä kokoaika vai osa-aika `Full- or part-time (F/P):` tähän vastataan joko `f`ull tai `p`art kirjaimella
+3 Jos kyseessä on kokoaika (f syöttö) annetaan seuraaavaksi kuukaudet jolle laskelma halutaan tehdä, `Month or range of months:`.
+Syötteen voi joko antaa kuukausi kerrallaan jolloin numero `1` vastaisi tammikuuta, tai joukkona '1:4' joka vastaisi aikaväliä tammi - huhikuuta.
+Syötettä antaessa ei kuukausien järjestyksellä ole merkitystä. 
 
-Kuukausia syötettäessä pyytää ohjelma syöttämään kuukausia kunnes käyttäjä haluaa jatkaa seuraavaan 
-kohtaan. Siirtyminen tapahtuu *c*-kirjain syötteellä.
- 
-Kun ohjelma pytää *uudestaan* syöttämään koko- tai osa-aikaisuuden voi tässä kohtaa valita *c*-kirjaimella
-jatkamisen seuraavaan syöttökohtaan.
+![Ohje](.kuvat/salary_months.png)
 
-** Tässä vaiheessa kehitystä ohjelma ei vielä tee mitään muuta kuin pyytää inputtia **
-** Mahdolliset tulostukset ovat vain kehitysvaiheen tulostuksia **
+4 Kun joko yksi kuukausi tai kuukausi joukko on syötetty pytää ohjelma syöttämään uuden kuukauden tai joukon joka lisätään laskelmaan. 
+Antamalla syötteenä `c` palaa ohjelma kohtaan 2.
+Jos kaikki halutut kuukaudet annettu jatketaan ohjelman kulkua syötteellä `c`.
+
+
+5 Jos syötteeksi annetaan `p` pyytää ohjelma syöttämään osa-aikaisuuden `Part time percentage:`. Tämä annetaan kokonaislukuna, esim. `70`
+jonka jälkeen annetaan kuukaudet joille laskelma halutaan tehdä. 
+
+![Ohje](.kuvat/parttime.png)
+
+6 Kun ylläolevat syötteet on saatu annetua pyydetään veroprosenttia `Tax percentage:` tämäkin annetaan kokonaislukuna, esim. `25`. 
+Oman veroprosenttinsa voi laskea osoitteessa [laskuri](https://avoinomavero.vero.fi/_/)
+
+7 Viimeiseksi pyydetään palkallisten lomapäivien määrää `Paid vacation days:` näiden avulla lasketaan lomarahat
+
+![Ohje](.kuvat/tax_holiday.png)
