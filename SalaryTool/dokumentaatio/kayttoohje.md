@@ -51,7 +51,7 @@ ruudulle `exit`
 Syötteen voi joko antaa kuukausi kerrallaan jolloin numero `1` vastaisi tammikuuta, tai joukkona '1:4' joka vastaisi aikaväliä tammi - huhikuuta.
 Syötettä antaessa ei kuukausien järjestyksellä ole merkitystä. 
 
-![Ohje](.kuvat/salary_months.png)
+![Ohje](./kuvat/salary_months.png)
 
 4 Kun joko yksi kuukausi tai kuukausi joukko on syötetty pytää ohjelma syöttämään uuden kuukauden tai joukon joka lisätään laskelmaan. 
 Antamalla syötteenä `c` palaa ohjelma kohtaan 2.
@@ -61,11 +61,11 @@ Jos kaikki halutut kuukaudet annettu jatketaan ohjelman kulkua syötteellä `c`.
 5 Jos syötteeksi annetaan `p` pyytää ohjelma syöttämään osa-aikaisuuden `Part time percentage:`. Tämä annetaan kokonaislukuna, esim. `70`
 jonka jälkeen annetaan kuukaudet joille laskelma halutaan tehdä. 
 
-![Ohje](.kuvat/parttime.png)
+![Ohje](./kuvat/parttime.png)
 
 6 Kun ylläolevat syötteet on saatu annetua pyydetään veroprosenttia `Tax percentage:` tämäkin annetaan kokonaislukuna, esim. `25`. 
 Oman veroprosenttinsa voi laskea osoitteessa [laskuri](https://avoinomavero.vero.fi/_/)
 
 7 Viimeiseksi pyydetään palkallisten lomapäivien määrää `Paid vacation days:` näiden avulla lasketaan lomarahat
 
-![Ohje](.kuvat/tax_holiday.png)
+![Ohje](./kuvat/tax_holiday.png)
