@@ -1,8 +1,8 @@
 class TaxCalculator():
-    """Laskee veron kuukausipalkasta sekä lomarahasta  
-        
+    """Laskee veron kuukausipalkasta sekä lomarahasta
+
     Attributes:
-        u_x: käyttäjän syöttämät arvot UI luokassa 
+        u_x: käyttäjän syöttämät arvot UI luokassa
     """
 
     def __init__(self, u_x):

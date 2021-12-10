@@ -1,8 +1,8 @@
 class MonthlyToDaily:
     """Laskee kuukausipalkasta päiväpalkan
-        
+
     Attributes:
-        monthly_salary: kuukausipalkka 
+        monthly_salary: kuukausipalkka
     """
 
 

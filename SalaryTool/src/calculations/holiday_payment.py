@@ -1,9 +1,9 @@
 
 class HolidayPayment:
     """Laskee --> lomarahan osuuden palkasta, lomarahan osaikaisesta työsta, sekä "aidot" lomapäivät
-    
+
     Attributes:
-        u_x: UI:stä saadut syötteet 
+        u_x: UI:stä saadut syötteet
     """
 
     def __init__(self, u_x):
@@ -13,7 +13,7 @@ class HolidayPayment:
             u_x (object): sisältää UI luokassa syötteenä annetut tiedot
         """
 
-        self.holidays = u_x.holidays                    
+        self.holidays = u_x.holidays
         self.monthly_salary = u_x.monthly_salary
         self.paid_holiday_days = u_x.paid_holiday_days
         self.days_withdrawn_from_payment = None
@@ -21,13 +21,13 @@ class HolidayPayment:
         self.daily_salary = u_x.daily_salary
 
     def holiday_payment_days(self):
-        """Poistaa lomapäivistä lauantait, palautta aidon määrän lomapäiviä 
+        """Poistaa lomapäivistä lauantait, palautta aidon määrän lomapäiviä
 
         Returns:
             int: oikea määrä päiviä joita voi olla töistä poissa
         """
 
-        self.paid_holiday_days = self.holidays - (self.holidays//6)   
+        self.paid_holiday_days = self.holidays - (self.holidays//6)
         return self.paid_holiday_days
 
     def withdrawn_days_from_payment(self):
@@ -37,7 +37,7 @@ class HolidayPayment:
             int: määrä päiviä joita ei voi olla poissa töistä vaikka kuuluvatkin lomapäiviin
         """
 
-        self.days_withdrawn_from_payment = self.holidays//6    
+        self.days_withdrawn_from_payment = self.holidays//6
         return self.days_withdrawn_from_payment
 
     def calculate_holiday_money(self):

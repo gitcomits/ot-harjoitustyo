@@ -1,9 +1,9 @@
 class YearlyHolidaysToMonthly:
-    """Jakaa syötetyn vuosiloman niille kuukausille joille töitä on tehty  
-        
+    """Jakaa syötetyn vuosiloman niille kuukausille joille töitä on tehty
+
     Attributes:
         holidays: syötetyt lomapäivät
-        worked months: lista jossa kuukaudet joina tehty töitä  
+        worked months: lista jossa kuukaudet joina tehty töitä
     """
 
     def __init__(self, holidays, worked_months):

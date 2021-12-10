@@ -1,14 +1,14 @@
 class PartTimeCalculator:
-    """Laskee kuukausipalkasta osa-aikaisen palkan osa-aikaisuus coefficientin avulla 
-        
+    """Laskee kuukausipalkasta osa-aikaisen palkan osa-aikaisuus coefficientin avulla
+
     Attributes:
-        monthly_salary: kuukausipalkka 
+        monthly_salary: kuukausipalkka
     """
 
 
     def __init__(self, monthly_salary):
         """Luokan konstruktori jossa määritellään muuttujat tuleville funktioille
-        
+
         Args:
             monthly_salary (float): käyttäjän syöttämä kuukausipalkka
         """
