@@ -6,6 +6,11 @@ class TaxCalculator():
     """
 
     def __init__(self, u_x):
+        """Luokan konstruktori, luodaan muuttujat funktioille
+
+        Args:
+            u_x ([type]): [description]
+        """
         self.mo_salary = u_x.monthly_salary
         self.tax = u_x.tax_percentage
 

@@ -7,7 +7,7 @@ class YearlyHolidaysToMonthly:
     """
 
     def __init__(self, holidays, worked_months):
-        """Luodaan muuttujat alla oleville funktioille
+        """Luokan konstruktori, luodaan muuttujat alla oleville funktioille
 
         Args:
             holidays (int): vuosiloma päivät
