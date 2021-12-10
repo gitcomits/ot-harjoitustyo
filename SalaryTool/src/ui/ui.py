@@ -7,6 +7,8 @@ else:                                                           # index.py suori
     from ui.ui_defs  import UIDefs
 
 class UI:
+    """Luokan funktio on tallentaa käyttäjän antamat syötteet, tarkistukset tehdään UIDefs luokassa
+    """
 
     defs = UIDefs()
 

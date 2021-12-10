@@ -10,8 +10,18 @@ from calculations.holiday_payment import HolidayPayment
 from calculations.montly_salary_to_daily import MonthlyToDaily
 from calculations.yearly_holidays_to_monthly import YearlyHolidaysToMonthly
 class Format:
+    """Formatoi datan helpommin käsiteltävään muotoon dictionary muuttujaan  
+        
+    Attributes:
+        u_x: käyttäjän syöttämät arvot UI luokassa 
+    """
 
     def __init__(self, u_x):
+        """Luokan konstruktori, määritellään muuttujat
+
+        Args:
+            u_x (object): UI luokassa syötetyt tiedot
+        """
 
         self.monthly_salary = u_x.monthly_salary
         self.caclulation_salary = 0
@@ -35,6 +45,10 @@ class Format:
         self.h_p = HolidayPayment(self)
 
     def re_format(self):
+        """Tehdään datan uudelleen formatointi new_order dictionariin, samalla tehdään laskutoimenpiteitä lomarahoihin ja lomapäiviin sekä
+        verot lasketaan palkalle ja lomarahoille
+        """
+
         for m_m in self.months:                               #months in string
             self.new_order[m_m] = calendar.month_abbr[m_m]
         inputed_months = []

@@ -13,13 +13,6 @@ class TestHolidayPayment(unittest.TestCase):
         self.daily_salary = 200
         u_x = type('', (), {})()
         u_x.holidays = self.holidays
-    #    self.u_x = UI()
-    #    self.u_x.holidays = self.holidays
-    #    self.u_x.holidays = self.holidays
-
-#    def test_init_constructor(self,u_x):
-#        self.assertEqual(HolidayPayment.__init__(self,u_x),self.holidays)
-
 
     def test_holiday_payment_days(self):
         hdp = HolidayPayment.holiday_payment_days(self)
@@ -36,5 +29,3 @@ class TestHolidayPayment(unittest.TestCase):
     def test_calculate_holiday_money_part_time(self):
         self.assertEqual(HolidayPayment.calculate_holiday_money_part_time(self, 50), 100)   
     
- 
-
