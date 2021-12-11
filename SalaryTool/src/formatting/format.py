@@ -3,12 +3,15 @@
 # Month abreavation, Net salary, gross salary, full-/part-time percentage,
 # earned holiday payment net, earned holiday payment gross
 import calendar
+from typing import NewType
 
 from calculations.part_time_calculation import PartTimeCalculator
 from calculations.tax_calculation import TaxCalculator
 from calculations.holiday_payment import HolidayPayment
 from calculations.montly_salary_to_daily import MonthlyToDaily
 from calculations.yearly_holidays_to_monthly import YearlyHolidaysToMonthly
+from formatting.output import OutPut 
+
 class Format:
     """Formatoi datan helpommin käsiteltävään muotoon dictionary muuttujaan
 
@@ -43,6 +46,7 @@ class Format:
         self.paid_holiday_days = YearlyHolidaysToMonthly(self.holidays,\
         self.m_div).year_to_monthly()
         self.h_p = HolidayPayment(self)
+        self.output = OutPut()
 
     def re_format(self):
         """Tehdään datan uudelleen formatointi new_order dictionariin, samalla tehdään
@@ -58,14 +62,14 @@ class Format:
 
                 if key == 100:
                     s_s = self.new_order[month]
-                    s_s += ": Veroton >>" + str(self.monthly_salary) #net salary per month
+                    s_s += ":" + str(self.monthly_salary) #net salary per month
                     #gross salary per month
-                    s_s += ": VEROTETTU >>" + str(round(self.tax_calculation.\
+                    s_s += ":" + str(round(self.tax_calculation.\
                         calculate_income_after_tax(),2))
-                    s_s += ": Työaikaosuus >>" + str(key)     #full time/part time
-                    s_s += ": lomaraha veroton >>" + str(self.h_p.calculate_holiday_money())
+                    s_s += ":" + str(key)     #full time/part time
+                    s_s += ":" + str(round(self.h_p.calculate_holiday_money(),2))
                     #holiday money per month
-                    s_s += ": lomaraha VEROTETTU>>" + str(round(self.tax_calculation.\
+                    s_s += ":" + str(round(self.tax_calculation.\
                     calculate_holiday_money_after_tax(self.h_p.calculate_holiday_money()),2))
                     self.new_order[month] = s_s
                     self.net += self.monthly_salary                 #net salary whole period
@@ -76,21 +80,21 @@ class Format:
                 else:
                     s_s = self.new_order[month]
                     #net salary per month
-                    s_s += ": Veroton >> " + str(round(self.p_t_c.calculate_part_time_salary(key)\
+                    s_s += ":" + str(round(self.p_t_c.calculate_part_time_salary(key)\
                     ,2))
                     temp = self.monthly_salary
                     self.monthly_salary = self.p_t_c.calculate_part_time_salary(key)
                     self.net += self.monthly_salary
                     self.part_time_tax_calculation = TaxCalculator(self)
                     #gross salary per month
-                    s_s += ": VEROTETTU >> " + str(round(self.part_time_tax_calculation.\
+                    s_s += ":" + str(round(self.part_time_tax_calculation.\
                     calculate_income_after_tax(),2))
                     self.gross += self.part_time_tax_calculation.calculate_income_after_tax()
-                    s_s += ": työaikaosuus >> " + str(key)  #full time/part time
-                    s_s += ": lomaraha veroton >>" + str(round(self.h_p.\
+                    s_s += ":" + str(key)  #full time/part time
+                    s_s += ":" + str(round(self.h_p.\
                     calculate_holiday_money_part_time(key),2))
                     self.monthly_salary = self.h_p.calculate_holiday_money_part_time(key)
-                    s_s += ": lomaraha VEROTETTU >>" + str(round(self.part_time_tax_calculation.\
+                    s_s += ":" + str(round(self.part_time_tax_calculation.\
                     calculate_holiday_money_after_tax(self.h_p.calculate_holiday_money_part_time\
                     (key)),2))
                     self.monthly_salary = temp
@@ -100,8 +104,7 @@ class Format:
         if len(zero_months) > 0:                         # zero fill for none inserted months
             for z_m in zero_months:
                 s_s = self.new_order[z_m]
-                s_s += ":0:0:0:0"
+                s_s += ":0:0:0:0:0"
                 self.new_order[z_m] = s_s
 
-        for n_n in self.new_order.keys():                # temp print before next step
-            print(self.new_order[n_n])
+        self.output.to_screen(self.new_order)

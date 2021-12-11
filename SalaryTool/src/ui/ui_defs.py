@@ -19,7 +19,7 @@ class UIDefs:
         print()
         print(" " * e, "*" * m)
         print(" " * e, "*", message.center(m-4),"*")
-
+    
         if(len(c_group) > 0):
             for c in c_group:
                 print(" " * e, "*", c.center(m-4),"*")
@@ -195,6 +195,26 @@ class UIDefs:
             print(" " * 15, ">>> Month already exists in input <<<")    
         return l     
 
+    def range_has_inserted_month(self, l:list, c:int):                      
+        """Tarkstaa että käyttäjän syöttämä kausi ei sisällä yksittäisi kuukausia 
+
+        Args:
+            l (list): Ajemmin syötetyt kuukaudet
+            c (int): kuukausi joka halutaan lisätä syötetyiden kuukausien joukkoon
+
+        Returns:
+            Boolean: True jos listassa, False jos ei aikaisemmin syötetty
+        """
+
+        if(l.count(c) == 0):
+            return False
+        else:
+            print(" " * 15, ">>> A month has already been inserted in the range of months <<<")    
+        return True     
+
+
+
+
     def already_exists_in_range(self,m, r):                  
         """Tarkistetaan onko syötetty kuukausi jo olemassa jossakin syötetyssä kuukausi joukossa
 
@@ -320,4 +340,3 @@ class UIDefs:
                     return True
 
         return False        
-

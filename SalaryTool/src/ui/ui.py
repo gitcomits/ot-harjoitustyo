@@ -96,6 +96,7 @@ class UI:
 
                         if(len(months) > 0 or len(months_r) > 0):           # has anything bee ninserted
                             if(len(m_div) > 0):                             # tarkastukset
+                                
                                 pass
 
                             m_div = defs.save_months_to_dictionary(m_div, prop, months, months_r)
@@ -146,6 +147,18 @@ class UI:
                                 check = True
                                 n1 = validation[0]
                                 n2 = validation[1]
+
+                                print(m_div, " ekalla kierroksella")
+                                print(months, " months hello")
+                                print(months_r, " range here ")
+
+
+                                if(len(months) != 0):        
+                                    while(n1 <= n2):
+                                        if (defs.range_has_inserted_month(months,n1)):
+                                            check = False
+                                            break
+                                        n1 += 1 
 
                                 for mon in months_r:
                                     t = [] 
