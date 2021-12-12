@@ -1,9 +1,9 @@
-#Luokkakaavio
+# Luokkakaavio
 
 ![Luokkakaavio](./kuvat/luokkakaavio.jpg)
 
 
-#Sekvenssikaavio
+# Sekvenssikaavio
 
 Kun ohjelma käynnistetään mainissä ohjelman kontrolli siirtyy Format luokan kautta UI:hin. UI:ssä käyttäjää pyydetään syöttämään 
 	- kk palkka

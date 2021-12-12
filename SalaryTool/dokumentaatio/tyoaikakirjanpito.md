@@ -19,4 +19,5 @@
 |10.12.21|15:00 - 18:00  |Docstring                                                     |3:00|
 |11.12.21|15:00 - 20:00  |Output luokan tekoa                                           |5:00|
 |11.12.21|20:00 - 22:00  |Pdf tallennus                                                 |2:00| 
-|        |               |Tunnit yhteensä 						|60:40|
+|12.12.21|16:00 - 20:00  |Dokumentointi, testejä, pdf tallennukselle oma luokka         |4:00|
+|        |               |Tunnit yhteensä 						|64:40|

@@ -14,14 +14,14 @@ Ohjelman käyttäminen ei vaadi rekisteröitymistä, kaikille käyttäjille toim
 Käyttöliittymissä tulee olemaan mahdollisuus syöttää seuraavat tiedot: 
 	
 	- [x] kk palkka						 
-	- [x] valinta brutto- / netto tuloille
-	  	- [x] mahdollistaa veroprosentin syötön 
+	- [x] verotietojen syöttö
+	  	- [x] mahdollistaa brutto / netto tulot 
 	- [x] osa-aikaisuus vai kokoaika
 	- [x] aika mille tulot lasketaan ja millä aikaisuudella
 	- [x] tulostus summista ja niiden jakautumisesta kk tasolla
 	- [x] lomapäivien syöttö
-	- [ ] ruudulle tulostus luettavaan muotoon
-	- [ ] tallennus tiedostoon txt tai pdf	
+	- [x] ruudulle tulostus luettavaan muotoon
+	- [x] tallennus tiedostoon pdf muotoon	
 
 ## Ensimmäisen version toiminnallisuus 
 

@@ -69,3 +69,7 @@ Oman veroprosenttinsa voi laskea osoitteessa [laskuri](https://avoinomavero.vero
 7 Viimeiseksi pyydetään palkallisten lomapäivien määrää `Paid vacation days:` näiden avulla lasketaan lomarahat
 
 ![Ohje](./kuvat/tax_holiday.png)
+
+8 Tämän jälkeen ruudulle tulostuu erittely tuloista kuukausitasolla sekä polku jonne data on tallennettu pdf muodossa
+
+![Ohje](./kuvat/final.png)

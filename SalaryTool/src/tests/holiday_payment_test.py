@@ -13,6 +13,9 @@ class TestHolidayPayment(unittest.TestCase):
         self.daily_salary = 200
         u_x = type('', (), {})()
         u_x.holidays = self.holidays
+        u_x.monthly_salary = 1000
+        u_x.paid_holiday_days = 20
+        u_x.daily_salary = 50
 
     def test_holiday_payment_days(self):
         hdp = HolidayPayment.holiday_payment_days(self)
@@ -29,3 +32,7 @@ class TestHolidayPayment(unittest.TestCase):
     def test_calculate_holiday_money_part_time(self):
         self.assertEqual(HolidayPayment.calculate_holiday_money_part_time(self, 50), 100)   
     
+
+    def test_class_init_value(u_x):
+        o = HolidayPayment(u_x)
+        #self.assertEqual(o.paid_holiday_days,20)
