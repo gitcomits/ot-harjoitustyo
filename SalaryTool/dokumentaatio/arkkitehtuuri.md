@@ -1,6 +1,6 @@
 # Luokkakaavio
 
-![Luokkakaavio](./kuvat/luokkakaavio.jpg)
+![Luokkakaavio](./kuvat/luokkakaavio.png)
 
 
 # Sekvenssikaavio
