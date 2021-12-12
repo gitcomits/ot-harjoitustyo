@@ -3,14 +3,12 @@
 # Month abreavation, Net salary, gross salary, full-/part-time percentage,
 # earned holiday payment net, earned holiday payment gross
 import calendar
-from typing import NewType
-
 from calculations.part_time_calculation import PartTimeCalculator
 from calculations.tax_calculation import TaxCalculator
 from calculations.holiday_payment import HolidayPayment
 from calculations.montly_salary_to_daily import MonthlyToDaily
 from calculations.yearly_holidays_to_monthly import YearlyHolidaysToMonthly
-from formatting.output import OutPut 
+from formatting.output import OutPut
 
 class Format:
     """Formatoi datan helpommin käsiteltävään muotoon dictionary muuttujaan

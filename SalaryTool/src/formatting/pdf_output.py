@@ -1,11 +1,11 @@
-from fpdf import FPDF
 from datetime import datetime
+from fpdf import FPDF
 
 class PdfOutput:
     """Tallennus pdf muotoon
 
         Attributes:
-            
+
         """
 
 
@@ -13,11 +13,11 @@ class PdfOutput:
         """Luokan konstruktori, määritellään muuttujat
 
         Args:
-            
+
         """
 
         self.pdf = FPDF()
-        self.line = 0 
+        self.line = 0
         self.save_as = "SalaryCalculation " + str(datetime.now()) + ".pdf"
 
     def _pdf_create_new(self):
@@ -46,22 +46,21 @@ class PdfOutput:
         self.pdf.add_page()
 
     def pdf_create(self, text:list):
-        """Kutsutaan Output luokasta, kutsuu muita luokan funktioita jotka kirjoittavat text:listan pdf:n
-        tallentaa pdf käyttäjän koneelle
+        """Kutsutaan Output luokasta, kutsuu muita luokan funktioita jotka
+         kirjoittavat text:listan pdf:n tallentaa pdf käyttäjän koneelle
 
         Args:
-            text (list): sisältää Output luokan muokkaman datan 
+            text (list): sisältää Output luokan muokkaman datan
         """
 
         self._pdf_create_new()
 
-        for t in text:
-            if t == "NewPage":
+        for t_t in text:
+            if t_t == "NewPage":
                 self._pdf_add_page()
                 continue
-            self._pdf_do_insert(t)
-        
+            self._pdf_do_insert(t_t)
+
         self.pdf.output(self.save_as)
 
         print("\n\n\nPDF saved to project root flder")
- 

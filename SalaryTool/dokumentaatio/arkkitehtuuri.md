@@ -15,7 +15,7 @@ Kun ohjelma käynnistetään mainissä ohjelman kontrolli siirtyy Format luokan 
 Jokaisen syötteen kohdalla UI kutsuu UIDefsiä jossa tarkastetaan syötteen oikeellisuus. 
 Kun kaikki tarvittava on syötetty palauttaa UI datan Format luokalle. 
 Format luokka formatoi datan muotoon josta se voidaan helpommin tulostaa ruudulle ja/tai tiedostoon,
-Format luokka möys kutsuu seuraavia luokkia joissa tehdään erinäisiä laskutoimituksia
+Format luokka myös kutsuu seuraavia luokkia joissa tehdään erinäisiä laskutoimituksia
 
 	- PartTimeCalculator 
 	- TaxCalculator
@@ -23,5 +23,9 @@ Format luokka möys kutsuu seuraavia luokkia joissa tehdään erinäisiä laskut
 	- MonthlyToDaily
 	- YearlyHolidaysToMonthly
 	 
+Laskutuoimituksien jälkeen luokka Output tulostaa formatoidun datan ruudulle ja kutsuu PdfOutput luokkaa 
+tallentaen saman datan pdf tiedostona.
+
 ![Sekvenssikaavio](./kuvat/sekvenssikaavio.png)
+
 
