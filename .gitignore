@@ -2,3 +2,4 @@
 .pytest_cache
 htlmcov
 __pycache__
+*.pdf
