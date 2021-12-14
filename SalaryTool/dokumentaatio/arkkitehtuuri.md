@@ -38,8 +38,8 @@ Luokat jotka tekevät laskutoimituksia ovat
 
 Luokka `Output` saa luokassa `Format` tehdyt laskennat ja järjestää nämä ruudulle luoettavaan formaattiin.
 PDF tallennus tapahtuu luokassa `PdfOutput` mikä saa saman syötteen `OutPut` luokasta kuin ruudulle tulostetun.
-PDF tiedostot tallennetaan muodossa SC + timestamp() + .pdf. 
-Tallennuskansion polku on /SalaryTool/src/output.
+PDF tiedostot tallennetaan muodossa `SC + timestamp() + .pdf`. 
+Tallennuskansion polku on `/SalaryTool/src/output`.
 
 
 ## Luokkakaavio
