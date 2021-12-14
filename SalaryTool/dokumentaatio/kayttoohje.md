@@ -1,6 +1,6 @@
 ### Käyttöohje
 
-*Tätä osiota päivitetään sitä myöten kun ohjelman toiminnallisuus etenee*
+*Release version käyttöohje*
 
 ##  Ohejalman käynnistäminen
 
