@@ -28,7 +28,7 @@ tuottanut minkäänlaisia virheilmoituksia tai muita ongelmia. Tosin ohjelmaa ja
 Toiminnallisuus on todettu samaksi kuin mitä [`vaatimuusmäärittely.md`](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/vaatimusmaarittely.md)
  sisältää. On todettava että ohjelman aikaiset ohjeistukset eivät välttämättä joka kohdassa ole mahdollisimman selkeitä. On kuitenkin yritetty ilmaista mitä ja 
 missä muodossa syöte halutaisiin. Käytössä ei kuitenkaa pitäisi ilmetä hämmennystä jos käyttäjä turvautuu 
-käyttöohjeisiin [`käyttöohje.md`]((https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/kayttoohje.md).
+käyttöohjeisiin [`käyttöohje.md`](https://github.com/gitcomits/ot-harjoitustyo/blob/master/SalaryTool/dokumentaatio/kayttoohje.md).
 
 ## Laatuongelmat
 
