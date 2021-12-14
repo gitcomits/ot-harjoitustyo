@@ -20,4 +20,5 @@
 |11.12.21|15:00 - 20:00  |Output luokan tekoa                                           |5:00|
 |11.12.21|20:00 - 22:00  |Pdf tallennus                                                 |2:00| 
 |12.12.21|16:00 - 20:00  |Dokumentointi, testejä, pdf tallennukselle oma luokka         |4:00|
-|        |               |Tunnit yhteensä 						|64:40|
+|14.12.21|14:00 - 16:00  |Arkkitehtuuri, config-tiedosto                                |2:00|
+|        |               |Tunnit yhteensä 						|66:40|

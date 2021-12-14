@@ -1,3 +1,5 @@
+import configparser
+import os
 class MonthlyToDaily:
     """Laskee kuukausipalkasta päiväpalkan
 
@@ -18,12 +20,19 @@ class MonthlyToDaily:
 
 
     def monthly_salary_to_daily(self):
-        """Lasketaan päiväpalkka kuukausipalkasta
+        """Lasketaan päiväpalkka kuukausipalkasta. Päivien määrä päiväpalkan laskemiseen
+        vaihtelee TES:stä riippuen, päivien määrän voi määritellä config tiedostossa
 
         Returns:
             float: päiväpalkka laskettuna kuukausipalkasta
         """
 
-        self.daily_salary = self.monthly_salary/22
+        path = os.getcwd() + "/config/config.cfg"
+        parser = configparser.ConfigParser()
+
+        parser.read(path)
+        days =int(parser.get("config", "MonthlySalaryToDaily"))
+
+
+        self.daily_salary = self.monthly_salary/days
         return self.daily_salary
-        

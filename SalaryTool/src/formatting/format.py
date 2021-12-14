@@ -1,7 +1,3 @@
-# This class reformats the given information, fills the empty months, for easier printout
-# Order in new_order is as follows
-# Month abreavation, Net salary, gross salary, full-/part-time percentage,
-# earned holiday payment net, earned holiday payment gross
 import calendar
 from calculations.part_time_calculation import PartTimeCalculator
 from calculations.tax_calculation import TaxCalculator
@@ -12,6 +8,9 @@ from formatting.output import OutPut
 
 class Format:
     """Formatoi datan helpommin käsiteltävään muotoon dictionary muuttujaan
+    new_order dictionaryn sisältö: Month abreavation, Net salary,
+    gross salary, full-/part-time percentage, earned holiday payment net,
+    earned holiday payment gross
 
     Attributes:
         u_x: käyttäjän syöttämät arvot UI luokassa
@@ -51,7 +50,7 @@ class Format:
         laskutoimenpiteitä lomarahoihin ja lomapäiviin sekä verot lasketaan palkalle ja lomarahoille
         """
 
-        for m_m in self.months:                               #months in string
+        for m_m in self.months:
             self.new_order[m_m] = calendar.month_abbr[m_m]
         inputed_months = []
         for key in self.m_div.keys():
@@ -60,35 +59,29 @@ class Format:
 
                 if key == 100:
                     s_s = self.new_order[month]
-                    s_s += ":" + str(self.monthly_salary) #net salary per month
-                    #gross salary per month
-                    s_s += ":" + str(round(self.tax_calculation.\
-                        calculate_income_after_tax(),2))
-                    s_s += ":" + str(key)     #full time/part time
+                    s_s += ":" + str(self.monthly_salary)
+                    s_s += ":" + str(round(self.tax_calculation.calculate_income_after_tax(),2))
+                    s_s += ":" + str(key)
                     s_s += ":" + str(round(self.h_p.calculate_holiday_money(),2))
-                    #holiday money per month
                     s_s += ":" + str(round(self.tax_calculation.\
                     calculate_holiday_money_after_tax(self.h_p.calculate_holiday_money()),2))
                     self.new_order[month] = s_s
-                    self.net += self.monthly_salary                 #net salary whole period
-                    #gross salary whole period
+                    self.net += self.monthly_salary
                     self.gross += self.tax_calculation.calculate_income_after_tax()
                     self.hol_mon += self.h_p.calculate_holiday_money()
 
                 else:
                     s_s = self.new_order[month]
-                    #net salary per month
                     s_s += ":" + str(round(self.p_t_c.calculate_part_time_salary(key)\
                     ,2))
                     temp = self.monthly_salary
                     self.monthly_salary = self.p_t_c.calculate_part_time_salary(key)
                     self.net += self.monthly_salary
                     self.part_time_tax_calculation = TaxCalculator(self)
-                    #gross salary per month
                     s_s += ":" + str(round(self.part_time_tax_calculation.\
                     calculate_income_after_tax(),2))
                     self.gross += self.part_time_tax_calculation.calculate_income_after_tax()
-                    s_s += ":" + str(key)  #full time/part time
+                    s_s += ":" + str(key)
                     s_s += ":" + str(round(self.h_p.\
                     calculate_holiday_money_part_time(key),2))
                     self.monthly_salary = self.h_p.calculate_holiday_money_part_time(key)
@@ -99,7 +92,7 @@ class Format:
                     self.new_order[month] = s_s
 
         zero_months = set(self.months) - set(inputed_months)
-        if len(zero_months) > 0:                         # zero fill for none inserted months
+        if len(zero_months) > 0:
             for z_m in zero_months:
                 s_s = self.new_order[z_m]
                 s_s += ":0:0:0:0:0"

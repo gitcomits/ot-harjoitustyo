@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from fpdf import FPDF
 
@@ -18,7 +19,9 @@ class PdfOutput:
 
         self.pdf = FPDF()
         self.line = 0
-        self.save_as = "SalaryCalculation " + str(datetime.now()) + ".pdf"
+        path = os.getcwd() + "/src/output/"
+        name = "SC" + str(datetime.now()) + ".pdf"
+        self.save_as = path + name
 
     def _pdf_create_new(self):
         """Pohjustetaan tyhjä pdf tiedosto pohjaksi tallenteelle
@@ -63,4 +66,4 @@ class PdfOutput:
 
         self.pdf.output(self.save_as)
 
-        print("\n\n\nPDF saved to project root flder")
+        print("\n\n\nPDF saved as " + self.save_as)

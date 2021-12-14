@@ -80,7 +80,7 @@ class OutPut:
                     text = l_i[0].center(12) + l_i[2].center(12)
                     self.pdf_text.append(text)
 
-        self.pdf_text.append("NewPage")
+    #    self.pdf_text.append("NewPage")
         text = " Yearly Summary:"
         self.pdf_text.append(text)
         text = "Gross".center(12) + "Net".center(12) + "HP".center(12)
