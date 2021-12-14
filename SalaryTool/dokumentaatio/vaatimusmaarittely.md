@@ -1,5 +1,7 @@
 # Vaatimusmäärittely
 
+Ennen projektin alkua tehty vaatimuusmäärittely täyttyi sekä ylittyi siltä osin että konfiguraatio tiedoston käyttö mahdollistui.
+
 ## Käyttötarkoitus
 
 Sovelluksen avulla käyttäjä pystyy laskemaan tulonsa haluamaltaan ajalta. Jos käyttäjä tekee esim. 60% työpäivää
@@ -13,15 +15,17 @@ Ohjelman käyttäminen ei vaadi rekisteröitymistä, kaikille käyttäjille toim
 
 Käyttöliittymissä tulee olemaan mahdollisuus syöttää seuraavat tiedot: 
 	
-	- [x] kk palkka						 
-	- [x] verotietojen syöttö
-	  	- [x] mahdollistaa brutto / netto tulot 
-	- [x] osa-aikaisuus vai kokoaika
-	- [x] aika mille tulot lasketaan ja millä aikaisuudella
-	- [x] tulostus summista ja niiden jakautumisesta kk tasolla
-	- [x] lomapäivien syöttö
-	- [x] ruudulle tulostus luettavaan muotoon
-	- [x] tallennus tiedostoon pdf muotoon	
+- [x] kk palkka						 
+- [x] verotietojen syöttö
+  	- [x] mahdollistaa brutto / netto tulot 
+- [x] osa-aikaisuus vai kokoaika
+- [x] prosentuualinen työaika osuus
+- [x] aika mille tulot lasketaan ja millä aikaisuudella
+- [x] tulostus summista ja niiden jakautumisesta kk tasolla
+- [x] lomapäivien syöttö
+- [x] ruudulle tulostus luettavaan muotoon
+- [x] tallennus tiedostoon pdf muotoon	
+- [x] config tiedostosta TES riippuvaiselle datalle
 
 ## Ensimmäisen version toiminnallisuus 
 
@@ -34,11 +38,10 @@ Lomarahat lasketaan kokonaisuudessaan maksettavaksi kesäkuussa.
 
 ## Jatkokehitys 
 
-Tulevissa kehtiysversioissa voisi mahdollitaa
+Tulevissa kehitysversioissa voisi mahdollistaa
 	
-	- tallennus pdf/txt tiedostoksi
-	- lomarahojen mahdollinen jakautuma maksettavaksi valituilla kuukausilla
-	- ylitöiden syöttö takautuvasti kuukausi palkan lisäksi
-	- ylitöiden arviointi kuukausittain
-	- lomarahojen vaihto lomapäiviksi joko kokonaan tai vain osittain     
+- lomarahojen mahdollinen jakautuma maksettavaksi valituilla kuukausilla
+- ylitöiden syöttö takautuvasti kuukausi palkan lisäksi
+- ylitöiden arviointi kuukausittain
+- lomarahojen vaihto lomapäiviksi joko kokonaan tai vain osittain     
   
