@@ -37,8 +37,8 @@ Ohjelma kuitenkin laskee annetuille lomapäiville lomarahan.
 Jos muutosta työajassa viime vuoteen verrattuna ei ole ollut toteutuu laskelma oikein,
 muuten on hyvä ottaa huomioon että lomarahojen summa on tulevana vuotena maksussa.    
 
-Päiväpalkkaa lasettaessa, jota käytetään lomarahojen laskemiseen, käytetään jakajana 22:ta. 
-Tämäkin luku vaihtelee TES:stä riippuen.  
+Päiväpalkkaa lasettaessa, jota käytetään lomarahojen laskemiseen, käytetään jakajana `config.cfg` tiedostossa olevaa MonthlySalaryToDaily -muuttujan arvoa. 
+Tämäkin luku vaihtelee TES:stä riippuen, `config.cfg` tiedosto sijaitsee hakemistossa `src/config/`.    
 
 ## Käyttö
 
