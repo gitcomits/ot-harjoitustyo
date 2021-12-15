@@ -60,9 +60,9 @@ Ohjelman käynnistyksen jälkeen pääsee käyttäjä poistumaan siitä missä t
 ruudulle `exit`
 
 1 Ohjelma pyytää syöttämään kuukausipalkan `Monthly salary:` johon annetaan palkka jolla laskelma halutaan tehdä.
-2 Ohjelma kysyy onko kyseessä kokoaika vai osa-aika `Full- or part-time (F/P):` tähän vastataan joko `f`ull tai `p`art kirjaimella
-3 Jos kyseessä on kokoaika (f syöttö) annetaan seuraaavaksi kuukaudet jolle laskelma halutaan tehdä, `Month or range of months:`.
-Syötteen voi joko antaa kuukausi kerrallaan jolloin numero `1` vastaisi tammikuuta, tai joukkona '1:4' joka vastaisi aikaväliä tammi - huhikuuta.
+2 Ohjelma kysyy onko kyseessä kokoaika vai osa-aika `Full- or part-time (F/P):` tähän vastataan joko `f`(ull) tai `p`(art) kirjaimella
+3 Jos kyseessä on kokoaika (`f` syöttö) annetaan seuraaavaksi kuukaudet jolle laskelma halutaan tehdä, `Month or range of months:`.
+Syötteen voi joko antaa kuukausi kerrallaan jolloin numero `1` vastaisi tammikuuta, tai joukkona `1:4` joka vastaisi aikaväliä tammi - huhikuuta.
 Syötettä antaessa ei kuukausien järjestyksellä ole merkitystä. 
 
 ![Ohje](./kuvat/salary_months.png)
