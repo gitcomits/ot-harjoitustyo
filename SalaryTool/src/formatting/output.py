@@ -1,4 +1,3 @@
-
 from formatting.pdf_output import PdfOutput
 
 class OutPut:
@@ -30,6 +29,9 @@ class OutPut:
         for t_o in self.pdf_text:
             if t_o == "NewPage":
                 print("\n")
+                continue
+            if t_o == "NewLines":
+                print("\n\n")
                 continue
             print(t_o)
             if t_o[-1] == ":":
@@ -80,7 +82,7 @@ class OutPut:
                     text = l_i[0].center(12) + l_i[2].center(12)
                     self.pdf_text.append(text)
 
-    #    self.pdf_text.append("NewPage")
+        self.pdf_text.append("NewLines")
         text = " Yearly Summary:"
         self.pdf_text.append(text)
         text = "Gross".center(12) + "Net".center(12) + "HP".center(12)

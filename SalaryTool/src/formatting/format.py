@@ -98,4 +98,5 @@ class Format:
                 s_s += ":0:0:0:0:0"
                 self.new_order[z_m] = s_s
 
+
         self.output.to_screen(self.new_order)

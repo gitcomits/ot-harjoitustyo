@@ -62,8 +62,11 @@ class PdfOutput:
             if t_t == "NewPage":
                 self._pdf_add_page()
                 continue
+            if t_t == "NewLines":
+                continue
             self._pdf_do_insert(t_t)
 
         self.pdf.output(self.save_as)
 
         print("\n\n\nPDF saved as " + self.save_as)
+        print("\n")

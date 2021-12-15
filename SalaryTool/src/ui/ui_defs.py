@@ -13,8 +13,8 @@ class UIDefs:
             c_group (list): tekstiä lista muodossa, jokainen alkio tulostuu omalle rivilleen
         """
 
-        m = 80                      # lengt of start
-        e = 15                      # empty spaces
+        m = 80
+        e = 15
 
         print()
         print(" " * e, "*" * m)
@@ -311,8 +311,15 @@ class UIDefs:
             for n in m:
                 t1.append(n)     
 
-        if(key in dic):                                        
-            print("has skey :", key)
+
+        if(key in dic):       
+            
+            temp = dic[key]
+            for te in t1:
+                temp.append(te)
+            temp.sort()    
+            dic[key] = temp
+            return dic
 
         else:
             t1.sort()

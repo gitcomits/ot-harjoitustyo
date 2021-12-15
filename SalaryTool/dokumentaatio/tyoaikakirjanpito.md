@@ -21,4 +21,5 @@
 |11.12.21|20:00 - 22:00  |Pdf tallennus                                                 |2:00| 
 |12.12.21|16:00 - 20:00  |Dokumentointi, testejä, pdf tallennukselle oma luokka         |4:00|
 |14.12.21|14:00 - 16:00  |Arkkitehtuuri, config-tiedosto                                |2:00|
-|        |               |Tunnit yhteensä 						|66:40|
+|15.12.21|14:00 - 18:00  |Viimeiset viilaukset                                          |4:00|
+|        |               |Tunnit yhteensä 						|70:40|

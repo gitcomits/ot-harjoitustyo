@@ -1,4 +1,4 @@
-### Käyttöohje
+# Käyttöohje
 
 *Release version käyttöohje*
 
@@ -40,6 +40,20 @@ muuten on hyvä ottaa huomioon että lomarahojen summa on tulevana vuotena maksu
 Päiväpalkkaa lasettaessa, jota käytetään lomarahojen laskemiseen, käytetään jakajana `config.cfg` tiedostossa olevaa MonthlySalaryToDaily -muuttujan arvoa. 
 Tämäkin luku vaihtelee TES:stä riippuen, `config.cfg` tiedosto sijaitsee hakemistossa `src/config/`.    
 
+
+## Yleiset huomiot
+
+Tekstipohjainen käyttöliittymä ei ole kaikista innovatiivisin ja sen käyttö voi tuntua aluksi hankalalta. 
+Tarkastuksia on paljon ja syöttö formaatti tulee olla oikeanlainen jotta ohjelmassa saa kaikein syötettyä. 
+Voi myös tuntua että kohdassa jossa valitaan ensin koko- tai osa-aika ja sen jälkeen kuukaudet loopataan turhaan. 
+Tämän kohdan edes takaisin palloittelu mahdollistaa tarpeen vaatiessa sen että jokaiselle kuukaudellevoi syöttää oman prosentuaalisen ajan. 
+
+Kuten yllä on jo mainittu niin lomarahat maksetaan oikeasti vasta seuraavana vuonna lomapäivien ansaitsemisesta.
+Ohjelmassa lomarahat lasketaan maksettavaksi kokonaisuudessaan kesäkuussa, oli silloin ollut töissä tai ei.
+Ohjelma olettaa että käyttäjä tietää palkkansa lisäksi lomapäviensä määrän sekä veroprosenttinsa. 
+
+Päiväpalkka lasketaan kuukausipalkasta 22 päivän säännöllä. Jos tätä haluaa muuttaa voi sen tehdä `config.cfg` tiedoston kautta. 
+
 ## Käyttö
 
 Ohjelman käynnistyksen jälkeen pääsee käyttäjä poistumaan siitä missä tahansa vaiheessa kirjoittamalla 
@@ -70,6 +84,7 @@ Oman veroprosenttinsa voi laskea osoitteessa [laskuri](https://avoinomavero.vero
 
 ![Ohje](./kuvat/tax_holiday.png)
 
-8 Tämän jälkeen ruudulle tulostuu erittely tuloista kuukausitasolla sekä polku jonne data on tallennettu pdf muodossa
+8 Tämän jälkeen ruudulle tulostuu erittely tuloista kuukausitasolla sekä polku jonne data on tallennettu pdf muodossa.
+Otsikkorivillä oleva HP on lyhennys HolidayPayment, eli lomarahoista. 
 
 ![Ohje](./kuvat/final.png)
