@@ -12,10 +12,6 @@ class TestMonthlyToDaily(unittest.TestCase):
         ds = self.monthly_salary/22
         self.assertEqual(MonthlyToDaily.monthly_salary_to_daily(self),ds)
 
-    #def test__init__(self):
-    #    init = MonthlyToDaily(2200)
-    #    self.assertEqual(MonthlyToDaily.__init__(self,2000), 2000)
-
 
     def test_class_init_value(self):
         o = MonthlyToDaily(self.monthly_salary).__init__(333)

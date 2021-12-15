@@ -36,13 +36,20 @@ class UIDefs:
             Boolean: True/False riippuen onko arvo positiivinen luku vai ei
         """
 
-        if(isinstance(digit, int)): 
-            if(int(digit) < 0): 
+        try:
+            i = int(digit)
+            if(i <= 0): 
                 return False
-        if(isinstance(digit, float)):
-            if(digit < 0): 
+            return True    
+
+        except:
+            try:
+                i = float(digit)
+                if(i <= 0): 
+                    return False
+                return True    
+            except:
                 return False
-        return True
 
     def is_cero(self, digit):
         """Jos saatu syöte on 0 niin poistutaan ohjelmasta
