@@ -40,5 +40,5 @@ Riippuvuuksien asennus (**kaikki poetry komennot tulee suorittaa SalaryTool-kans
 
 ### Source code
 
-Release Candidate
+Release
 [source code](https://github.com/gitcomits/ot-harjoitustyo/releases)
