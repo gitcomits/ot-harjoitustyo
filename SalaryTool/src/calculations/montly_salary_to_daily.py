@@ -1,7 +1,7 @@
-import configparser
-import os
+from calculations.config_checks import ConfigChecks 
 class MonthlyToDaily:
     """Laskee kuukausipalkasta päiväpalkan
+    käyttäää jakajana config tiedostossa määriteltyä arvoa
 
     Attributes:
         monthly_salary: kuukausipalkka
@@ -17,21 +17,38 @@ class MonthlyToDaily:
 
         self.monthly_salary = monthly_salary
         self.daily_salary = float()
+        self.cc = ConfigChecks()
 
-
+        
     def monthly_salary_to_daily(self):
         """Lasketaan päiväpalkka kuukausipalkasta. Päivien määrä päiväpalkan laskemiseen
         vaihtelee TES:stä riippuen, päivien määrän voi määritellä config tiedostossa
+        arvon muodollinen oikeallisuus tarkastetaan ConfigChecks luokassa
 
         Returns:
             float: päiväpalkka laskettuna kuukausipalkasta
         """
 
-        path = os.getcwd() + "/config/config.cfg"
-        parser = configparser.ConfigParser()
+    #    path = os.getcwd() + "/config/config.cfg"
+    #    parser = configparser.ConfigParser()
 
-        parser.read(path)
-        days =int(parser.get("config", "MonthlySalaryToDaily"))
+    #    parser.read(path)
+    #    days = parser.get("config", "MonthlySalaryToDaily")
+
+                    
+        check_me = self.cc.configuration_exists("conversion", "MonthlySalaryToDaily")
+    
+        if(check_me[0]):
+            d = check_me[1]
+            d = self.cc.monthly_salary_to_daily(d)
+            if d[0]:
+                days = d[1]
+            else:
+                self.cc.information_lack("MonthlySalaryToDaily")
+
+
+        else:
+            self.cc.information_lack("MonthlySalaryToDaily")
 
 
         self.daily_salary = self.monthly_salary/days

@@ -22,4 +22,5 @@
 |12.12.21|16:00 - 20:00  |Dokumentointi, testejä, pdf tallennukselle oma luokka         |4:00|
 |14.12.21|14:00 - 16:00  |Arkkitehtuuri, config-tiedosto                                |2:00|
 |15.12.21|14:00 - 18:00  |Viimeiset viilaukset                                          |4:00|
-|        |               |Tunnit yhteensä 						|70:40|
+|17.12.21|12:00 - 14:30	 |Konfiguraatio tarkastuksia                                    |2:30|
+|        |               |Tunnit yhteensä 						|73:10|
