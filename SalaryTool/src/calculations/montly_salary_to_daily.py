@@ -29,12 +29,6 @@ class MonthlyToDaily:
             float: päiväpalkka laskettuna kuukausipalkasta
         """
 
-    #    path = os.getcwd() + "/config/config.cfg"
-    #    parser = configparser.ConfigParser()
-
-    #    parser.read(path)
-    #    days = parser.get("config", "MonthlySalaryToDaily")
-
         check_me = self.c_c.configuration_exists("conversion", "MonthlySalaryToDaily")
 
         if check_me[0]:

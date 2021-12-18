@@ -23,4 +23,5 @@
 |14.12.21|14:00 - 16:00  |Arkkitehtuuri, config-tiedosto                                |2:00|
 |15.12.21|14:00 - 18:00  |Viimeiset viilaukset                                          |4:00|
 |17.12.21|12:00 - 14:30	 |Konfiguraatio tarkastuksia                                    |2:30|
-|        |               |Tunnit yhteensä 						|73:10|
+|17.12.21|16:00 - 19:00  |Pylinta, testien uudellen tekoa ohjelma muutosten takia       |3:00|
+|        |               |Tunnit yhteensä 						|76:10|

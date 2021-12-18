@@ -1,12 +1,13 @@
 import unittest
 from calculations.montly_salary_to_daily import MonthlyToDaily
-
+from calculations.config_checks import ConfigChecks
 class TestMonthlyToDaily(unittest.TestCase):
 
     def setUp(self):
 
         self.monthly_salary = 2200
         self.daily_salary = float()
+        self.c_c = ConfigChecks()
 
     def test_monthly_salary_to_daily(self):
         ds = self.monthly_salary/22
